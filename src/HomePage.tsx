@@ -73,7 +73,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       <section id="product" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <h2 className="serif text-3xl font-semibold sm:text-4xl">{t.modulesTitle}</h2>
         <p className="mt-3 max-w-2xl text-muted">{t.modulesLead}</p>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {MODULES.map((mod) => {
             const Icon = MODULE_ICONS[mod.id];
             return (
@@ -84,25 +84,10 @@ export function HomePage({ lang }: { lang: Lang }) {
               >
                 <Icon className="h-5 w-5 text-gold-dark" />
                 <h3 className="mt-3 font-bold">{lang === "sv" ? mod.sv : mod.en}</h3>
-                <p className="mt-1 text-sm text-muted">{t.demoHint}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{lang === "sv" ? mod.blurbSv : mod.blurbEn}</p>
               </a>
             );
           })}
-        </div>
-      </section>
-
-      <section className="border-y border-line bg-card">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <h2 className="serif text-3xl font-semibold sm:text-4xl">{t.spineTitle}</h2>
-          <p className="mt-3 max-w-2xl text-muted">{t.spineLead}</p>
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {t.spine.map((item) => (
-              <article key={item.t} className="rounded-2xl border border-line bg-paper p-6">
-                <h3 className="text-lg font-bold">{item.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{item.d}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
