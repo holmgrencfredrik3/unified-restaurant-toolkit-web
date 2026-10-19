@@ -1,4 +1,4 @@
-name: GitHub Pages
+name: Firebase Hosting
 
 on:
   push:
@@ -7,19 +7,14 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: firebase-hosting
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,10 +23,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-        env:
-          GITHUB_PAGES: "true"
-      - uses: actions/upload-pages-artifact@v3
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          path: dist
-      - id: deploy
-        uses: actions/deploy-pages@v4
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UNIFIEDRESTAURANTTOOLKIT }}
+          projectId: unifiedrestauranttoolkit
+          target: sales
+          channelId: live

@@ -4,5 +4,5 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: process.env.GITHUB_PAGES === "true" ? "/unified-restaurant-toolkit-web/" : "/",
+  base: "/",
 });

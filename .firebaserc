@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "unifiedrestauranttoolkit"
+  },
+  "targets": {
+    "unifiedrestauranttoolkit": {
+      "hosting": {
+        "sales": ["unified-kitchen-toolkit"]
+      }
+    }
+  }
+}

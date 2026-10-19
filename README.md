@@ -9,8 +9,17 @@ npm install
 npm run dev
 ```
 
-## Download
+## Hosting
 
-The Download buttons point at the latest Windows installer:
+The site is on Firebase Hosting, project `unifiedrestauranttoolkit`, site `unified-kitchen-toolkit`:
 
-https://github.com/holmgrencfredrik3/restaurant-toolkit-releases/releases/latest
+https://unified-kitchen-toolkit.web.app
+
+That site is separate from the license admin on `unifiedrestauranttoolkit.web.app`. Deploy only this repo’s hosting target:
+
+```bash
+npm run build
+firebase deploy --only hosting:sales
+```
+
+Pushes to `main` deploy the same target through GitHub Actions.
