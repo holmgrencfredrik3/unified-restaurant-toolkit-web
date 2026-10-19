@@ -1,7 +1,6 @@
 import { ArrowLeft } from "lucide-react";
 import { copy, MODULES, type Lang, type ModuleId } from "./copy";
 import { MODULE_ICONS } from "./icons";
-import { ModuleShots } from "./ModuleShots";
 import { moduleGear, modulePages } from "./pages";
 import { moduleHref } from "./route";
 
@@ -31,16 +30,6 @@ export function ModulePage({ id, lang }: { id: ModuleId; lang: Lang }) {
           >
             {t.quoteThis}
           </a>
-        </div>
-      </section>
-
-      <section className="border-y border-line bg-card">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-          <h2 className="serif text-2xl font-semibold sm:text-3xl">{t.previewTitle}</h2>
-          <p className="mt-2 max-w-2xl text-sm text-muted">{t.previewNote}</p>
-          <div className="mt-8">
-            <ModuleShots id={id} lang={lang} />
-          </div>
         </div>
       </section>
 
