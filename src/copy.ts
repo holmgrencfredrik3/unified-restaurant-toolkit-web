@@ -26,7 +26,7 @@ export const copy = {
     heroKicker: "För kök som märker, kommunicerar och planerar varje pass",
     heroTitle: "Ett system för restaurangköket. Inte fem appar.",
     heroLead:
-      "Skriv ut allergener och bäst-före på Brother-etiketter, skicka lappar till baren, lägg dagsplanen och hålla prepp — från en Windows-dator i köket och iPads som bara öppnar en webbläsare.",
+      "Skriv ut allergener och bäst-före på Brother-etiketter, skicka lappar till baren, lägg dagsplanen och kör prepp — från en Windows-dator i köket och iPads som bara öppnar en webbläsare.",
     heroCta: "Be om offert",
     heroSecondary: "30 dagar utan licensnyckel",
     modulesTitle: "Fem områden. En licens per kökdator.",
